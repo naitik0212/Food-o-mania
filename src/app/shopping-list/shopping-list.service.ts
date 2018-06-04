@@ -1,5 +1,5 @@
 import {Ingredient} from '../shared/ingredient.model';
-import {EventEmitter} from "@angular/core";
+import {EventEmitter, Injectable} from '@angular/core';
 
 export class ShoppingListService {
   ingredientsChanged = new EventEmitter<Ingredient[]>();
@@ -15,5 +15,14 @@ export class ShoppingListService {
     this.ingredients.push(ingredient);
     this.ingredientsChanged.emit(this.ingredients.slice());
     // this.ingredients.push(ingredient);
+  }
+
+  addIngredientstolist(ingredients: Ingredient[]) {
+    // for (let ingredient of ingredients){
+    //   this.addIngredient(ingredient);
+    // }
+    // Spread operator
+    this.ingredients.push(...ingredients);
+    this.ingredientsChanged.emit(this.ingredients.slice());
   }
 }
