@@ -8,8 +8,9 @@
     <div class="col-xs-12">
       <h2>
         <!--<h2 appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'green'">-->
-        <app-recipes *ngIf="loadedFeature==='recipe'"></app-recipes>
-        <app-shopping-list *ngIf="loadedFeature==='shopping'"></app-shopping-list>
+        <!--<app-recipes *ngIf="loadedFeature==='recipe'"></app-recipes>-->
+        <!--<app-shopping-list *ngIf="loadedFeature==='shopping'"></app-shopping-list>-->
+        <router-outlet></router-outlet>
       </h2>
     </div>
   </div>

@@ -16,6 +16,9 @@ import { UnlessDirective } from './Directives/Unless/unless.directive';
 import {  DropdownDirective } from './shared/dropdown.directive';
 import {RecipeService} from './recipes/recipe.service';
 import {ShoppingListService} from './shopping-list/shopping-list.service';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {AppRoutingModule} from './app-routing.module';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
     DropdownDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [RecipeService, ShoppingListService],
   bootstrap: [AppComponent]
